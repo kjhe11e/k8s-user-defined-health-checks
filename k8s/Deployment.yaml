@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+        - name: example-nodejs-service
+          image: node_express_server
+          ports:
+            - containerPort: 3000
+#          imagePullPolicy: Always  # Always tells k8s to always attempt downloading the image from cloud
+          imagePullPolicy: Never
+
