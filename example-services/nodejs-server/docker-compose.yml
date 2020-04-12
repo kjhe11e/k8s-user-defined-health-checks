@@ -3,7 +3,7 @@ version: '3'
 services:
   node_express_server:
     build: .
-    image: node_express_server
+    image: example_node_express_server
     ports:
       - "3000:3000"
 
