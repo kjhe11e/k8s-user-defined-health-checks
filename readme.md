@@ -42,10 +42,13 @@ and `kubectl get svc`.
 Now let's test out our simple NodeJS server. Run `minikube service my-app`. This will open up your browser to the service's
 URL. The service includes a `/heatlh` endpoint that should return "I'm alive!"
 
-**(TODO) Next steps: setup liveness and readiness probes...**
+**(TODO) Next steps:**
+
+* Setup liveness + readiness probes
+* Add a few example dependencies to the NodeJS example server, i.e. Postgres + Redis
 
 
-##### Cleanup:
+## Cleanup:
 
 Once you're done, clean up your k8s cluster by running `kubectl delete -f k8s`. This will remove any deployed Pods, Services, etc.
 as defined in the `k8s` directory.
